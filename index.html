@@ -2,51 +2,59 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <title>浜工祭の試作</title>
-    <script>
-      (function (d) {
-        var config = {
-            kitId: "fxm3sdb",
-            scriptTimeout: 3000,
-            async: true,
-          },
-          h = d.documentElement,
-          t = setTimeout(function () {
-            h.className =
-              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-          }, config.scriptTimeout),
-          tk = d.createElement("script"),
-          f = false,
-          s = d.getElementsByTagName("script")[0],
-          a;
-        h.className += " wf-loading";
-        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
-        tk.async = true;
-        tk.onload = tk.onreadystatechange = function () {
-          a = this.readyState;
-          if (f || (a && a != "complete" && a != "loaded")) return;
-          f = true;
-          clearTimeout(t);
-          try {
-            Typekit.load(config);
-          } catch (e) {}
-        };
-        s.parentNode.insertBefore(tk, s);
-      })(document);
-    </script>
-    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=BioRhyme+Expanded"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.js"
+      integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/hamburger.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <title>syoribu-sample</title>
   </head>
   <body>
     <header>
-      情報処理部
-      <nav style="display: flex">
-        <div class="link-list">
-          <li><a href="https://hoj.hamako-ths.ed.jp">HOJ</a></li>
-          <li><a href="https://www.hamako-ths.ed.jp">浜工高</a></li>
-        </div>
+      <h1>
+        <a href="./index.html">Syoribu Site</a>
+      </h1>
+      <nav class="pc-nav">
+        <ul>
+          <li><a href="https://hoj.hamako-ths.ed.jp/">HOJ</a></li>
+          <li><a href="https://www.hamako-ths.ed.jp">浜松工業高校</a></li>
+          <li><a href="./aboutus.html">About Us</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
       </nav>
+      <nav class="sp-nav">
+        <ul>
+          <li><a href="https://hoj.hamako-ths.ed.jp/">HOJ</a></li>
+          <li><a href="https://www.hamako-ths.ed.jp">浜松工業高校</a></li>
+          <li><a href="./aboutus.html">About Us</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li class="close"><span>Close</span></li>
+        </ul>
+      </nav>
+      <div id="hamburger">
+        <span></span>
+      </div>
     </header>
-    <p>おっそうだな</p>
+    <div class="space"></div>
+    <div class="title-visual">
+      <h1>浜松工業高校 <span>情報処理部</span></h1>
+    </div>
+    <div class="txt-visual">
+      <h2>われわれは世界を目指しているらしい</h2>
+    </div>
   </body>
 </html>
