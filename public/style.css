@@ -103,6 +103,8 @@ li {
   display: none;
 }
 
+
+/* ハンバーガーメニューの設定 */
 @media screen and (max-width: 640px) {
   .pc-nav {
     display: none;

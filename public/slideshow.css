@@ -1,7 +1,9 @@
 .slide {
     position: relative;
+    /* 横一杯、縦43％にして約21:9に */
     width: 100%;
     padding-top: 42.8%;
+    border-radius: 18px;
     overflow: hidden;
     background-color: #00000000;
   }
@@ -36,6 +38,7 @@
     width: 100%;
     height: auto;
     opacity: 0;
+    /* 繰り返しをする */
     animation: slideshow 9s linear infinite;
   }
   
